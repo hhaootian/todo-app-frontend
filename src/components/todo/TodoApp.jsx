@@ -17,6 +17,7 @@ class TodoApp extends Component {
                 <Router>
                     <>
                         <HeaderComponent/>
+                        
                         {/* switch to match any but only one route */}
                         <Switch>
                             <Route path="/" exact component={LoginComponent}/>
@@ -29,6 +30,7 @@ class TodoApp extends Component {
                             
                             <Route component={ErrorComponent}/>
                         </Switch>
+
                         <FooterComponent/>
                     </>
                 </Router>

@@ -52,20 +52,19 @@ class TodoCompnent extends Component {
     onSubmit(values) {
         let username = AuthenticationService.getLoggedInUserName()
 
-        if (this.state.id === -1){
-            TodoDataService.updateTodo(username, {
-                id: this.state.id,
-                description: values.description,
-                targetDate: values.targetDate
-            }).then(() => this.props.history.push(`/todos`))
-        } else{
-            TodoDataService.updateTodo(username, this.state.id, {
-                id: this.state.id,
-                description: values.description,
-                targetDate: values.targetDate
-            }).then(() => this.props.history.push(`/todos`))
+        let todo = {
+            id: this.state.id,
+            description: values.description,
+            targetDate: values.targetDate
         }
-        
+
+        if (this.state.id === -1){
+            TodoDataService.updateTodo(username, todo)
+            .then(() => this.props.history.push(`/todos`))
+        } else{
+            TodoDataService.updateTodo(username, this.state.id, todo)
+            .then(() => this.props.history.push(`/todos`))
+        }
     }
 
     render() {
