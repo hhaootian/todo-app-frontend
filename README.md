@@ -1,4 +1,4 @@
-# Todo Application with React and Spring Boot
+# Frontend of Todo Application
 
 To run the application:
 ```bash
