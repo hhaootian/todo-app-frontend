@@ -4,7 +4,7 @@ import TodoDataService from '../../api/todo/TodoDataService.js'
 import AuthenticationService from "./AuthenticationService"
 
 class ListTodosComponent extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             todos : [],
@@ -21,7 +21,7 @@ class ListTodosComponent extends Component {
         this.refreshTodos()
     }
 
-    refreshTodos(){
+    refreshTodos() {
         let username = AuthenticationService.getLoggedInUserName()
         TodoDataService.retrieveAllTodos(username)
         .then(
@@ -35,7 +35,7 @@ class ListTodosComponent extends Component {
         let username = AuthenticationService.getLoggedInUserName()
         TodoDataService.deleteTodo(username, id)
         .then(
-            response => {
+            () => {
                 this.setState({message: `delete of todo ${id} is successful`})
                 this.refreshTodos()
             }

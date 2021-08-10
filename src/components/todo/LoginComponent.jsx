@@ -3,8 +3,8 @@ import AuthenticationService from "./AuthenticationService.js"
 
 class LoginComponent extends Component {
 
-    constructor(props){
-        super(props);
+    constructor(props) {
+        super(props)
 
         this.state = {
             username: "default",
@@ -14,8 +14,8 @@ class LoginComponent extends Component {
         }
 
         // bind function to class
-        this.handleChange = this.handleChange.bind(this);
-        this.loginClicked = this.loginClicked.bind(this);
+        this.handleChange = this.handleChange.bind(this)
+        this.loginClicked = this.loginClicked.bind(this)
     }
 
     // change text fields

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import AuthenticatedRoute from "./AuthenticatedRoute.jsx"
 import LoginComponent from './LoginComponent.jsx'
 import LogoutComponent from "./LogoutComponent.jsx"
@@ -18,7 +18,6 @@ class TodoApp extends Component {
                     <>
                         <HeaderComponent/>
                         
-                        {/* switch to match any but only one route */}
                         <Switch>
                             <Route path="/" exact component={LoginComponent}/>
                             <Route path="/login" component={LoginComponent}/>

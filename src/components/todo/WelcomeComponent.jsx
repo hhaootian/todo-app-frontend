@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import HelloWorldService from '../../api/todo/HelloWorldService.js'
 
 class WelcomeComponent extends Component {
